@@ -1,0 +1,118 @@
+/* ---- Estilização Geral (Tailwind: bg-slate-100) ---- */
+body {
+    background-color: #f1f5f9; /* Cor de fundo cinza clara */
+    font-family: sans-serif;
+    padding-top: 3rem; /* Equivalente ao mt-5 do Bootstrap */
+    padding-bottom: 3rem;
+}
+
+/* ---- Estilização do Card (Bootstrap: .card) ---- */
+.profile-card {
+    /* Tailwind: bg-white, rounded-2xl, shadow-xl, border-0 */
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    border: none;
+    overflow: hidden; /* Garante que os cantos arredondados sejam aplicados a tudo */
+}
+
+/* ---- Conteúdo de Texto dentro do Card ---- */
+.text-content {
+    /* Tailwind: text-center, p-6 */
+    text-align: center;
+    padding: 1.5rem;
+}
+
+/* ---- Imagem de Perfil ---- */
+.profile-image {
+    /* Tailwind: w-32, h-32, rounded-full, mx-auto, -mt-20, border-4, border-white */
+    width: 128px;
+    height: 128px;
+    border-radius: 9999px; /* Efeito de círculo completo */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -80px; /* Efeito de sobreposição para fora do card */
+    border: 6px solid #ffffff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Sombra sutil na foto */
+}
+
+/* ---- Textos de Nome, Cargo e Descrição ---- */
+.profile-name {
+    /* Tailwind: text-3xl, font-bold, text-slate-800, mt-4 */
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.profile-role {
+    /* Tailwind: text-indigo-500, font-semibold */
+    color: #6366f1;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.profile-description {
+    /* Tailwind: text-slate-600, text-base, mb-6 */
+    color: #475569;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* ---- Lista de Contatos ---- */
+.contact-list .list-group-item {
+    /* Tailwind: flex, items-center, gap-3, text-slate-700 */
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #334155;
+    border: none; /* Remove bordas padrão do Bootstrap */
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.contact-list .list-group-item svg {
+    /* Tailwind: text-slate-400 */
+    color: #94a3b8;
+}
+
+/* ---- Botão de Contato ---- */
+.contact-button {
+    /* Tailwind: w-full, mt-6, py-3, bg-indigo-600, text-white, font-semibold, rounded-lg, shadow-md */
+    display: block;
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1rem;
+    background-color: #4f46e5;
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    
+    /* Tailwind: transition-all, duration-300 */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efeito hover no botão (Tailwind: hover:bg-indigo-700, hover:shadow-lg) */
+.contact-button:hover {
+    background-color: #4338ca;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    transform: translateY(-2px); /* Efeito sutil de elevação */
+}
+
+/* ---- Responsividade (Tailwind: md:, lg:) ---- */
+@media (max-width: 768px) {
+    .profile-card .card-body {
+        padding: 1.5rem;
+    }
+
+    .profile-description {
+        font-size: 0.9rem;
+    }
+}
